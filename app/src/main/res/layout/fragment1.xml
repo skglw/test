@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_sky">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="write me"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/white">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.button.MaterialButton
+            android:layout_margin="10dp"
+            android:id="@+id/save"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cornerRadius="16dp"
+            app:rippleColor="@color/colorAccent"
+            app:icon="@drawable/ic_star_selected"
+            app:iconTint="@color/white"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp"
+            android:text="save"
+            android:textColor="@color/white"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_margin="10dp"
+            android:id="@+id/load"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cornerRadius="16dp"
+            app:rippleColor="@color/colorAccent"
+            app:icon="@drawable/ic_star_selected"
+            app:iconTint="@color/white"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp"
+            android:text="load"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:layout_margin="10dp"
+        android:id="@+id/send"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerRadius="16dp"
+        app:rippleColor="@color/colorAccent"
+        app:strokeColor="@color/colorAccent"
+        app:backgroundTint="@color/colorAccent"
+        app:strokeWidth="3dp"
+        android:text="send"
+        android:textColor="@color/white"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_margin="10dp"
+        android:id="@+id/post"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerRadius="16dp"
+        app:rippleColor="@color/colorAccent"
+        app:strokeColor="@color/colorAccent"
+        app:backgroundTint="@color/colorAccent"
+        app:strokeWidth="3dp"
+        android:text="send post"
+        android:textColor="@color/white"/>
+</LinearLayout>
+

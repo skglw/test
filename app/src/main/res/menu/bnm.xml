@@ -1,17 +1,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/item0"
+        android:enabled="true"
+        android:icon="@drawable/navigation_home_selector"
+        android:title="0"/>
+    <item
         android:id="@+id/item1"
         android:enabled="true"
-        android:icon="@drawable/heart"
-        android:title="@string/text_label_1"/>
+        android:icon="@drawable/navigation_home_selector"
+        android:title="1"/>
     <item
         android:id="@+id/item2"
         android:enabled="true"
-        android:icon="@drawable/heart"
-        android:title="@string/text_label_2"/>
-    <item
-        android:id="@+id/item3"
-        android:enabled="true"
-        android:icon="@drawable/heart"
-        android:title="@string/text_label_3"/>
+        android:icon="@drawable/navigation_home_selector"
+        android:title="2"/>
+
 </menu>

@@ -11,9 +11,7 @@ public class page extends Fragment {
 
     static final String ARGUMENT_PAGE_NUMBER = "arg_page_number";
 
-    int pageNumber;
-    int backColor;
-
+    int pageNumber; View view;
     static page newInstance(int page) {
         page pageFragment = new page();
         Bundle arguments = new Bundle();
@@ -31,12 +29,23 @@ public class page extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment, null);
 
-        TextView tvPage = view.findViewById(R.id.tvPage);
-        tvPage.setText("Page " + pageNumber);
-        TextView tvPage2 = view.findViewById(R.id.tvPage2);
-        tvPage2.setText("Page " + pageNumber);
+        switch (pageNumber){
+            case 0: view = inflater.inflate(R.layout.fragment0, null);
+                break;
+            case 1: view = inflater.inflate(R.layout.fragment1, null);
+                break;
+            case 2: view = inflater.inflate(R.layout.fragment2, null);
+                break;
+        }
+
+
+
+//
+//        TextView tvPage = view.findViewById(R.id.tvPage);
+//        tvPage.setText("Page " + pageNumber);
+//        TextView tvPage2 = view.findViewById(R.id.tvPage2);
+//        tvPage2.setText("Page " + pageNumber);
         return view;
     }
 }

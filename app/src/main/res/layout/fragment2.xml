@@ -5,18 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <TextView
-        android:id="@+id/tvPage2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="top"
-        android:textAppearance="?android:attr/textAppearanceLarge">
-    </TextView>
-    <TextView
-        android:id="@+id/tvPage"
+        android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:textAppearance="?android:attr/textAppearanceLarge">
-    </TextView>
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="2"/>
 </RelativeLayout>
