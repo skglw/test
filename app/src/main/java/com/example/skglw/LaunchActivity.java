@@ -4,24 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.GridView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLEncoder;
+import java.util.concurrent.FutureTask;
 
 public class LaunchActivity extends AppCompatActivity {
 
@@ -39,8 +29,7 @@ public class LaunchActivity extends AppCompatActivity {
                 final String username = etUN.getText().toString();
                 EditText etPW = findViewById(R.id.password);
                 final String password = etPW.getText().toString();
-
-                Thread request = new Thread(new Runnable() {
+                /*Thread request = new Thread(new Runnable() {
                     public void run() {
                         try {
                             URL url = new URL("http://mobile-api.fxnode.ru:18888/login");
@@ -79,9 +68,15 @@ public class LaunchActivity extends AppCompatActivity {
                             connection.disconnect();
                         } catch (Exception e) {Log.e("HTTP-ERROR", e.toString()); }
                     }
-                });
+                });*/
 
+              /*  JSONObject json = new JSONObject();
+                try{
+                json.put("username", username);
+                json.put("password", password);}catch(Exception e){}
+                Thread request = new Thread(new RequestRunnable("POST", "http://mobile-api.fxnode.ru:18888/login", json));
                 request.start();
+                Log.e("REQUEST IS RUNNING", String.valueOf(request.isAlive()));
                 try {
                     request.join();
                     String jsonString = String.valueOf(strB);
@@ -89,6 +84,38 @@ public class LaunchActivity extends AppCompatActivity {
                     String token = obj.get("token").toString();
                     Log.e("RESPONSE>>", jsonString);
                     Log.e("GOT TOKEN>>", token);
+
+                    Log.e("REQUEST IS RUNNING>>", String.valueOf(request.isAlive()));
+
+                    Intent intent = new Intent(LaunchActivity.this,MainActivity.class);
+                    intent.putExtra("login", username);
+                    intent.putExtra("token", token);
+                 // intent.putExtra("password", password);
+                    LaunchActivity.this.startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }*/
+                JSONObject json = new JSONObject();
+                try{
+                json.put("username", username);
+                json.put("password", password);}catch(Exception e){}
+
+
+                RequestCallable callable= new RequestCallable("POST", "http://mobile-api.fxnode.ru:18888/login", json);
+                FutureTask task = new FutureTask(callable);
+                Thread request = new Thread(task);
+                request.start();
+                Log.e("REQUEST IS RUNNING", String.valueOf(request.isAlive()));
+                try {
+                    request.join();
+                   //String str = String.valueOf(task.get());
+                    String jsonString = String.valueOf(task.get());
+                    JSONObject obj = new JSONObject(jsonString);
+                    String token = obj.get("token").toString();
+                    Log.e("RESPONSE>>", jsonString);
+                    Log.e("GOT TOKEN>>", token);
+
+                    Log.e("REQUEST IS RUNNING>>", String.valueOf(request.isAlive()));
 
                     Intent intent = new Intent(LaunchActivity.this,MainActivity.class);
                     intent.putExtra("login", username);
