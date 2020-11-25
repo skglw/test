@@ -3,29 +3,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
-    <com.google.android.material.button.MaterialButton
-        android:layout_margin="10dp"
-        android:id="@+id/map"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+    android:orientation="vertical"
+    android:background="@drawable/bg_sky">
+    <TextView
+        android:fontFamily="@font/dewberry"
+        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cornerRadius="16dp"
-        app:rippleColor="@color/colorAccent"
-        app:strokeColor="@color/colorAccent"
-        app:backgroundTint="@color/colorAccent"
-        app:strokeWidth="3dp"
-        android:text="open map"
-        android:textColor="@color/white"/>
+        android:text="Платежи"
+        android:textColor="@color/white"
+        android:textSize="26dp"/>
+
     <ListView
         android:id="@+id/lv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="280dp">
     </ListView>
-<!--    <GridView-->
-<!--        android:id="@+id/gv"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content">-->
-<!--    </GridView>-->
+
+    <TextView
+        android:fontFamily="@font/dewberry"
+        android:layout_gravity="center_horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Переводы"
+        android:textColor="@color/white"
+        android:textSize="26dp"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_margin="10dp"
+        android:id="@+id/btnRefill"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:rippleColor="@color/colorAccent"
+        app:icon="@drawable/ic_refill"
+        app:iconTint="@color/white"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp"
+        android:text="Между своими счетами"
+        android:textColor="@color/white"/>
+    <com.google.android.material.button.MaterialButton
+    android:layout_margin="10dp"
+    android:id="@+id/btnPay"
+    style="@style/Widget.MaterialComponents.Button.TextButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:rippleColor="@color/colorAccent"
+    app:icon="@drawable/ic_send"
+    app:iconTint="@color/white"
+    app:strokeColor="@color/white"
+    app:strokeWidth="1dp"
+    android:text="Другому пользователю"
+    android:textColor="@color/white"/>
 
 </LinearLayout>

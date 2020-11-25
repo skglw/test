@@ -2,17 +2,14 @@
     <item
         android:id="@+id/item0"
         android:enabled="true"
-        android:icon="@drawable/navigation_home_selector"
-        android:title="0"/>
+        android:icon="@drawable/selector_pays"/>
     <item
         android:id="@+id/item1"
         android:enabled="true"
-        android:icon="@drawable/navigation_home_selector"
-        android:title="1"/>
+        android:icon="@drawable/navigation_home_selector"/>
     <item
         android:id="@+id/item2"
         android:enabled="true"
-        android:icon="@drawable/navigation_home_selector"
-        android:title="2"/>
+        android:icon="@drawable/selector_profile"/>
 
 </menu>

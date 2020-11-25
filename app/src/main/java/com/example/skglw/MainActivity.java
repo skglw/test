@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import androidx.fragment.app.Fragment;
+
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -111,16 +111,16 @@ public class MainActivity extends FragmentActivity {
             return NUM_ITEMS;
         }
 
-        // Returns the fragment to display for that page
+        // Returns the fragment0 to display for that page
         @Override
-        public Fragment getItem(int position) {
+        public androidx.fragment.app.Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return Fragment0.newInstance(0, "Page #1");
+                    return Fragment0.newInstance();
                 case 1:
                     return Fragment1.newInstance();
                 case 2:
-                    return Fragment2.newInstance(2, "Page #3");
+                    return Fragment2.newInstance();
                 default:
                     return null;
             }
@@ -138,7 +138,7 @@ public class MainActivity extends FragmentActivity {
 //     }
 //
 //        @Override
-//        public Fragment getItem(int position) {
+//        public Fragment2 getItem(int position) {
 //            switch (position) {
 //                case 1:
 //                    //pager.setCurrentItem(0);

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ChooseActionActivity">
+    <com.google.android.material.button.MaterialButton
+        android:layout_margin="10dp"
+        android:id="@+id/btnPay"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:rippleColor="@color/colorAccent"
+        app:strokeColor="@color/colorAccent"
+        app:backgroundTint="@color/colorAccent"
+        app:strokeWidth="3dp"
+        android:text="Платеж или перевод"
+        android:textColor="@color/white"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_margin="10dp"
+        android:id="@+id/btnRefill"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:rippleColor="@color/colorAccent"
+        app:strokeColor="@color/colorAccent"
+        app:backgroundTint="@color/colorAccent"
+        app:strokeWidth="3dp"
+        android:text="Пополнение"
+        android:textColor="@color/white"/>
+</LinearLayout>

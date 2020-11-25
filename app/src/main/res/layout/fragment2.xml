@@ -1,16 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/RelativeLayout1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_sky">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
     <TextView
-        android:id="@+id/tv"
+        android:id="@+id/tvUser"
+        android:textAlignment="center"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="2"/>
-</RelativeLayout>
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="18sp"/>
+    <TextView
+        android:backgroundTint="@color/colorAccent"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:id="@+id/tvLog"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Изменить логин"
+        android:textSize="25sp"/>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/llLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="Старый логин:"
+        android:id="@+id/tilOldLog"
+        app:endIconTint="@color/white">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etOldLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="Новый логин:"
+        android:id="@+id/tilNewLog"
+        app:endIconTint="@color/white">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNewLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:layout_margin="10dp"
+        android:layout_gravity="right"
+        android:id="@+id/btnLog"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerRadius="16dp"
+        app:rippleColor="@color/colorAccent"
+        app:strokeColor="@color/colorAccent"
+        app:backgroundTint="@color/colorAccent"
+        app:strokeWidth="3dp"
+        android:text="Изменить"
+        android:textColor="@color/white"/>
+</LinearLayout>
+    <TextView
+        android:layout_margin="15dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Изменить пароль"
+        android:id="@+id/tvPass"
+        android:textSize="25sp"/>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/llPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="Старый пароль:"
+        app:endIconMode="password_toggle"
+        android:id="@+id/tilOldPass"
+        app:endIconTint="@color/white">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etOldPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_margin="10dp"
+        android:id="@+id/tilNewPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="Новый пароль:"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/white">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNewPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:layout_margin="10dp"
+        android:id="@+id/btnPass"
+        android:layout_gravity="right"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerRadius="16dp"
+        app:rippleColor="@color/colorAccent"
+        app:strokeColor="@color/colorAccent"
+        app:backgroundTint="@color/colorAccent"
+        app:strokeWidth="3dp"
+        android:text="Изменить"
+        android:textColor="@color/white"/>
+</LinearLayout>
+    <TextView
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Разблокировать карты"
+        android:id="@+id/tvUnblock"
+        android:textSize="25sp"/>
+    <TextView
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выйти"
+        android:id="@+id/tvLogout"
+        android:textSize="25sp"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:gravity="right"
+        android:id="@+id/llLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:padding="15dp"
+        android:id="@+id/tvMes"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вы уверены, что хотите выйти из профиля?"
+        android:fontFamily="@font/dewberry"
+        android:textSize="20sp"/>
+    <LinearLayout
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <com.google.android.material.button.MaterialButton
+        android:layout_margin="10dp"
+        android:id="@+id/btnCancel"
+        android:layout_gravity="right"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerRadius="16dp"
+        app:rippleColor="@color/colorAccent"
+        app:strokeColor="@color/colorAccent"
+        app:backgroundTint="@color/colorAccent"
+        app:strokeWidth="3dp"
+        android:text="Отмена"
+        android:textColor="@color/white"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_margin="10dp"
+        android:id="@+id/btnLogout"
+        android:layout_gravity="right"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerRadius="16dp"
+        app:rippleColor="@color/colorAccent"
+        app:strokeColor="@color/colorAccent"
+        app:backgroundTint="@color/colorAccent"
+        app:strokeWidth="3dp"
+        android:text="Выйти"
+        android:textColor="@color/white"/>
+    </LinearLayout>
+
+</LinearLayout>
+    <TextView
+        android:visibility="invisible"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выйти"
+        android:textSize="25sp"/>
+
+</LinearLayout>
+    </ScrollView>

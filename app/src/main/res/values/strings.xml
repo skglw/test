@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">skglw</string>
+    <string name="app_name">StarLight Bank</string>
     <string name="text_label_1">пункт1</string>
     <string name="text_label_2">пункт2</string>
     <string name="text_label_3">пункт3</string>
+    <string name="title_activity_map">Map</string>
 </resources>
